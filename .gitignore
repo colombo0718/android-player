@@ -1,0 +1,35 @@
+# 錄影暫存（檔案大、不進 git）
+recordings/
+*.mp4
+*.mkv
+*.mov
+*.avi
+
+# scrcpy 截圖暫存
+screenshots/
+*.png
+*.jpg
+!docs/**/*.png
+!docs/**/*.jpg
+!notes/**/*.png
+!notes/**/*.jpg
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# 系統
+.DS_Store
+Thumbs.db
+
+# 敏感資訊（手機 IP / token）
+.env
+.env.local
+adb-config.local
