@@ -2,7 +2,24 @@
 
 ## 這個專案是什麼
 
-LL 宇宙的**手機控制中心**——透過 scrcpy 把 Android 手機畫面投到桌面、用電腦操控手機，並把這個能力整合進 content-engine 的拍攝與測試流程。
+LL 宇宙的**手機控制中心 / 通用手機驗證儀器**——透過 scrcpy 把 Android 手機畫面投到桌面、用電腦操控手機，服務 LL 所有需要「在真手機跑一遍」的子產品。
+
+### 為什麼必要
+
+```
+LL 對外品牌幾乎全部是 web 產品：
+  RR  reinroom.leaflune.org      ← 手機 RWD 是核心體驗
+  DD  datadojo.leaflune.org      ← 高中校園用、學生大多用手機
+  LL  leaflune.org               ← 品牌入口、手機流量大宗
+  SS  strategyspace.leaflune.org ← 對戰平台、手機端必須
+  XX  xuanxuexi.leaflune.org     ← 兒童語言學習、手機 / 平板優先
+  TT  tradetrail.leaflune.org    ← 即時金融資訊、手機常用
+  II  id.leaflune.org            ← Widget 在手機 LINE 跑、必須驗證
+
+→ 「在真手機跑」是 LL 所有對外產品的硬需求
+→ F12 viewport 模擬不夠真實
+→ android-player = LL 通用手機驗證儀器
+```
 
 地位等同：
 - `image-studio` — 畫室（圖像生成）
@@ -32,18 +49,26 @@ OBS 抓全螢幕 → 觀眾看到「真實落地」
 
 → 取代過去用 F12 viewport 模擬手機的「假手機感」
 
-### 2. LL 各產品手機端驗證
+### 2. LL 所有對外產品的手機端驗證（高頻使用）
+
+**這是 android-player 的主要用途、不是次要用途**。LL 對外品牌幾乎全部 web、手機體驗是核心：
 
 ```
-✓ leaflune.org 手機版視覺
-✓ reinroom.leaflune.org RWD 體驗
-✓ datadojo.leaflune.org 手機端
-✓ tradetrail.leaflune.org 手機端
-✓ II Widget（未來）在手機 LINE 內顯示效果
-✓ XX 小春老師 卡牌 app 等手機產品
-```
+高優先（已上線、有真實用戶）：
+  ✓ leaflune.org           品牌入口
+  ✓ reinroom.leaflune.org  RR RWD（最近的工作重點）
+  ✓ datadojo.leaflune.org  DD 校園端
+  ✓ tradetrail.leaflune.org TT 金融端
+  ✓ xuanxuexi.leaflune.org XX 語言學習
+
+中優先（規劃中）：
+  ✓ id.leaflune.org        II Widget 在手機 LINE 顯示
+  ✓ strategyspace.leaflune.org SS 對戰平台
+  ✓ XX 小春老師 卡牌 app
 
 → 不再「我覺得手機上應該長這樣」、是「我看到手機上長這樣」
+→ 每次改動推上 CF Pages 後、開 android-player 看一眼 = 標準流程
+```
 
 ### 3. 自動化拍攝（未來可能）
 
