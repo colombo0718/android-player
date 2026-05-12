@@ -1,3 +1,6 @@
+# 二進制工具（scrcpy / adb，從 GitHub release 下載，不進 git）
+bin/
+
 # 錄影暫存（檔案大、不進 git）
 recordings/
 *.mp4
