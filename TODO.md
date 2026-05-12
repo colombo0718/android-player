@@ -30,9 +30,14 @@
 - Google driver 只 hardcode 了 VID_18D1（Google 自家設備）
 
 **為什麼擱置這條路**：
-- 修法 1：改 INF 加 vivo VID → 破壞數位簽章、要關閉 Windows driver 簽章驗證、工程量太大
-- 修法 2：找 vivo 官方 USB Driver → vivo 台灣官網不一定有 PC Suite
-- 修法 3：Universal ADB Driver（社群作）→ 還沒驗證可不可用
+- 修法 1：改 INF 加 vivo VID → 破壞數位簽章、要關閉 Windows driver 簽章驗證、要重啟 + 桌面會有「測試模式」水印、工程量太大
+- 修法 2：找 vivo 官方 USB Driver → vivo 台灣官網沒提供 PC Suite
+- 修法 3：Universal ADB Driver（ClockworkMod）→ **2026-05-12 驗證：項目失維護、下載連結 404 死了**
+- 修法 4：UniversalAdbDriver（koushik dutta GitHub）→ 也是 2019 年後沒更新、不確定含 VID_2D95
+
+→ 沒有現成且維護中的 driver 包含 vivo VID
+→ 唯一剩下選項都需要重啟 Windows + 工程量大
+→ ROI 太低、放棄
 
 **為什麼可以擱置**：
 - WiFi ADB 完全繞過 USB driver 問題
